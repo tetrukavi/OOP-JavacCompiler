@@ -1,0 +1,45 @@
+tetrukavi
+
+
+
+
+
+
+=============================
+=  Implementation details   =
+=============================
+Described In the "Answers to questions."
+
+
+
+=============================
+=    Answers to questions   =
+=============================
+1) I choose to implement the filers and order object under one big Genesis object, and then 3 son-classes
+   that suckle methods from it, divided by logical types. moreover, I have an Implementation
+   of the single choice principle - every class is doing one thing and one thing only and
+   the single part of the functionality provided by the software  - responsibility
+   should be entirely encapsulated by the class.
+   moreover, I have an implementation of Factory method pattern -
+   creating objects in a superclass (the factory), but allows subclasses (the filters || the orders)
+    to alter the type of objects that will be created.
+
+2) Type I exception - I choose to handle this kind of error in my program in the Filter/Order factories,
+   because there I have an indication if the filter\order is not valid (there is no filter\order in such
+   a name, but it's not a Type II error, so it's default filter\order). so I'm throwing the exception,
+   and when I'm parsing over the sections and building them, in case of Type I error, I'm catching it.
+
+   Type II exception -  I choose to handle this kind of error in my program in the parsing class, there
+   I'm also checking the sections measures and format, and handle them.
+   moreover, I have an implementation of three extended classes of Type II error, in order to give
+   informative message to the user.
+
+
+
+3) I sorted my files with an integration of my order mechanism and a version  of merge sort -
+  an efficient, general-purpose, comparison-based sorting algorithm. the comparison is working with my
+  order object, that the implementation of it it similar to comparator.
+  I used array data structure because arrays are convenient to use  to store multiple values in a single
+  variable, instead of declaring separate variables for each value.
+
+
